@@ -44,7 +44,11 @@ header.insertBefore( paragrafo, titulo);
 
 //appendChild
 const navLinks = document.querySelector("nav ul");
-const li= document.createElement("li");
+const li = document.createElement("li");
+const a = document.createElement("a");
+a.href = "#";
+a.textContent = "Blog";
+li.appendChild(a);
 navLinks.appendChild(li);
 
 //replaceChild
@@ -54,8 +58,10 @@ h2.textContent = "Novo Título";
 header.replaceChild(h2, titulo);
 
 //criando um nó de texto
-const meuTexto =  document.createTextNode("Inserindo outro título");
-console.log(meuTexto);
+const meuTexto = document.createTextNode("Inserindo outro título");
+const h3 = document.createElement("h3");
+h3.appendChild(meuTexto);
+h2.insertAdjacentElement('afterend',h3);
 
 const h3 = document.createElement("h3");
 h3.appendChild(meuTexto);
